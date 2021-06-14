@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+option csharp_namespace = "GrpcToolkit.Proto";
+
+message ResponseResult {
+	bool HasException = 1;
+	int32 StatusCode = 2;
+	string ExceptionMessage = 3;
+	string Result = 4;
+}

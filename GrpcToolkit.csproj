@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+      <TargetFramework>netcoreapp3.1</TargetFramework>
+      <Version>3.1.4</Version>
+      <Authors>Arcenox</Authors>
+      <Product>GrpcToolkit</Product>
+      <PackageLicenseExpression>MIT</PackageLicenseExpression>
+      <Copyright>Copyright 2021 Arcenox LLC</Copyright>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.38.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <Protobuf Include="BaseProto\Proto\responseResult.proto" />
+    <Content Include="BaseProto\**">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
